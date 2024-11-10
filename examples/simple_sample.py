@@ -39,7 +39,7 @@ def main():
     add_shape1(23, input)
     add_shape2(15, input)
 
-    pgrp = nest(input, box)
+    nbins, pgrp = nest(input, box)
 
     sw = SVGWriter()
     sw.write_packgroup(pgrp)

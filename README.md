@@ -51,7 +51,7 @@ def main():
     add_shape1(23, input)
     add_shape2(15, input)
 
-    pgrp = nest(input, box)
+    nbins, pgrp = nest(input, box)
 
     sw = SVGWriter()
     sw.write_packgroup(pgrp)
@@ -66,7 +66,14 @@ clipper backend and clipper works with integer coordinates.
 ## Example call
 
 ``` bash
-$ pip install nest2D
+$ sudo apt install libboost-dev libpolyclipping-dev libnlopt-cxx-dev cmake
+
+$ git clone https://github.com/lshwan/nest2D.git --recurse-submodules --remote-submodules
+$ cd nest2d
+
+$ conda activate {YOUR_ENV_NAME}
+
+$ python setup.py install
 $ python examples/simple_sample.py
 ```
 
